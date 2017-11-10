@@ -1,0 +1,36 @@
+@mixin padding($padding){
+    padding: $padding;
+}
+
+.padding-sm{
+    @include padding($padding-sm)
+}
+
+.padding-md{
+    @include padding($padding-md)
+}
+
+.padding-lg{
+    @include padding($padding-lg)
+}
+
+.padding-t-sm{
+    padding-top: $padding-sm;
+}
+
+.padding-t-md{
+    padding-top: $padding-md;
+}
+
+.padding-t-lg{
+    padding-top: $padding-lg;
+}
+
+.margin{
+    margin: $margin-md;
+}
+
+.margin-top-sm {
+    margin-top: $margin-sm;
+}
+

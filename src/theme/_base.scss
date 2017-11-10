@@ -1,0 +1,115 @@
+body{
+    margin: 0;
+    font-size: 62.5%;
+    display: flex;
+    font-family: $font_family;
+}
+
+.container {
+    display: flex; /* or inline-flex */
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.left-column{
+    font-size: 1rem;
+    text-align: center;
+    width: 20vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: $secondary;
+    color: $primary;
+    img{
+        height: 5rem;
+        width: 5 rem;
+        @include border-radius(2rem);
+    }
+    p{
+        line-height: 3rem;
+    }
+    hr{
+        line-height: 2rem;
+        width: 100%;
+    }
+    @include box-sizing();
+    @include padding(1rem);
+}
+
+.right-column{
+    font-size: 3em;
+    text-align: center;
+    width: 80vw;
+    background-color: $primary;
+    color: $secondary;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    @include box-sizing();
+    @include padding(1rem);
+}
+
+.box{
+    padding: $padding-md;
+    height: 15rem;
+    width: 15rem;
+    @include box-sizing();
+    @include box-shadow();
+    @include border-radius();
+}
+
+.card {
+    width: 15rem;                 /* Set width of cards */
+    border: 1px solid #EF9A9A;    /* Set up Border */
+    @include border-radius(4px);           /* Slightly Curve edges */
+    overflow: hidden;             /* Fixes the corners */
+    display: flex;                /* Children use Flexbox */
+    flex-direction: column;       /* Rotate Axis */
+  }
+
+  .card-header {
+    color: #D32F2F;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+    border-bottom: 1px solid #EF9A9A;
+    background-color: #FFEBEE;
+    padding: 5px 10px;
+  }
+
+  .card-main {
+    display: flex;              /* Children use Flexbox */
+    flex-direction: column;     /* Rotate Axis to Vertical */
+    justify-content: center;    /* Group Children in Center */
+    align-items: center;        /* Group Children in Center (+axis) */
+    padding: 15px 0;            /* Add padding to the top/bottom */
+  }
+
+  .material-icons {
+    font-size: 36px;
+    color: #D32F2F;
+    margin-bottom: 5px;
+  }
+
+  .main-description {
+    color: #D32F2F;
+    font-size: 12px;
+    text-align: center;
+  }
+
+@media (max-width: 500px) {
+    .container{
+        display: flex;
+        flex-flow: row wrap;
+        .left-column{
+            width: 100vw;
+            height: 100%;
+        }
+        .right-column{
+            width: 100vw;
+            height: 100%;
+        }
+    }
+}
+
